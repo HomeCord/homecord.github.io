@@ -1,0 +1,188 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 0.9em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  border-color: whitesmoke;
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.social-buttons .button {
+  margin-right: 0.3em;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #757bf8aa);
+}
+
+hr {
+  border-radius: 1em;
+  border-color: #fbab6177;
+}
+
+.section-heading {
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  font-size: x-large;
+}
+
+.section-description {
+  padding-top: 0em;
+  margin-top: 0em;
+  color: #AAA;
+}
+
+.card {
+  padding: 0.5em;
+  background-color: #f5f5f518;
+  border-radius: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  vertical-align: middle;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.card:hover {
+  filter: drop-shadow(0 0 2em #7b81f7c0);
+}
+
+.card .card-icon {
+  height: 4rem;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(15%);
+}
+
+/* Discord Icon only gets its own CSS because otherwise it would look larger than all the other icons annoyingly */
+.card .card-icon-discord {
+  height: 3rem;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(15%);
+}
+
+/* For FA icons in the Cards */
+.card .card-icon-fa {
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(15%);
+}
+
+.card-link .card-description {
+  color: #BBB;
+  font-size: smaller;
+  font-weight: normal;
+}
+
+.card-link p {
+  color: whitesmoke;
+}
+
+.faded-text {
+  color: #888;
+}
+
+
+/* LIGHT THEME VERSIONS */
+@media (prefers-color-scheme: light) {
+  :root {
+  color: #213547;
+  background-color: whitesmoke;
+  }
+  a {
+    color: #646cff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  .button:hover {
+    border-color: #0f0f0f;
+    border-width: 2px;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #757bf8aa);
+  }
+  hr {
+    border-color: #fbab6177;
+  }
+  .section-description {
+    color: #666666;
+  }
+  .card {
+    background-color: #0f0f0f18;
+  }
+  .card:hover {
+    filter: drop-shadow(0 0 2em #7b81f7c0);
+  }
+  .card-link .card-description {
+    color: #3d3d3d;
+  }
+  .card-link p {
+    color: #202224;
+  }
+  .faded-text {
+    color: #888;
+  }
+}

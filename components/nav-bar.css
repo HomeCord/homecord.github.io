@@ -1,0 +1,32 @@
+.nav-bar {
+    padding-bottom: 3em;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #414141;
+    border-radius: 8px;
+}
+
+.nav-bar ul li {
+    float: left;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #757575;
+}
+
+.nav-bar ul li a#nav-current-page {
+    background-color: #af784477;
+}
