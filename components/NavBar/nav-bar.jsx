@@ -4,7 +4,7 @@ export default function NavigationBar() {
     return (
         <nav className='nav-bar'>
             <ul>
-                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../index.html'>HomeCord</a></li>
             </ul>
         </nav>
     );

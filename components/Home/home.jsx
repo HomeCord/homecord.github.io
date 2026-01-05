@@ -14,7 +14,7 @@ export default function HomePage() {
             </p>
             <br />
             <hr />
-
+        
             <p className="faded-text">
               This website is open sourced on <a href='https://github.com/HomeCord/homecord.github.io' target='_blank'>GitHub here</a>.
             </p>
