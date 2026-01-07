@@ -198,23 +198,23 @@ export default function ProcessCommunity({ guild_id }) {
           <button className='button' id="guild-invite"><a href={`https://discord.gg/${communityData.discord_guild.invite_code}`}>Join Server</a></button>
         </div>
         <br />
-        <div className="scheduled-events section">
-          <h3 id="events-heading">Upcoming Scheduled Events</h3>
+        <div className="scheduled-events section one-column">
+          <h3 id="events-heading" className='grid-heading'>Upcoming Scheduled Events</h3>
           {scheduledEvents}
         </div>
         <br />
-        <div className="announcements section">
-          <h3 id="announcements-heading">Recent Announcements</h3>
+        <div className="announcements section one-column">
+          <h3 id="announcements-heading" className='grid-heading'>Recent Announcements</h3>
           {announcements}
         </div>
         <br />
-        <div className="threads section">
-          <h3 id="threads-heading">Active Threads</h3>
+        <div className="threads section one-column">
+          <h3 id="threads-heading" className='grid-heading'>Active Threads</h3>
           {threads}
         </div>
         <br />
-        <div className="messages section">
-          <h3 id="messages-heading">Noteworthy Recent Messages</h3>
+        <div className="messages section one-column">
+          <h3 id="messages-heading" className='grid-heading'>Noteworthy Recent Messages</h3>
           {messages}
         </div>
         <hr />
