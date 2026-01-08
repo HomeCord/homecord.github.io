@@ -8,6 +8,7 @@ import { BackendUri, ShowcaseType } from '../../Utility/utilityConstants';
 import PageInternalError from '../500/500';
 import PageBadRequest from '../400/400';
 import NavigationBar from '../NavBar/nav-bar';
+import { DiscordMessage, DiscordMessages } from '@skyra/discord-components-react';
 
 // Import font awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +18,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
 library.add(fas, fab, far);
+
+const BlurpleSparklesIcon = "https://zebby.is-from.space/r/BlurpleSparkles.png";
 
 
 
@@ -154,7 +157,7 @@ export default function ProcessCommunity({ guild_id }) {
       announcements.push(
         <div className="announcement-item">
           <FontAwesomeIcon icon="fa-solid fa-bullhorn" size="lg" />
-          <p className="announcement-timestamp">{new Date(item.timestamp).toLocaleDateString}</p>
+          <p className="announcement-timestamp">{new Date(item.timestamp).toLocaleDateString()}</p>
           <p className="announcement-content">{item.content}</p>
           {/* TODO: Handle Attachments & Polls */}
         </div>
@@ -179,10 +182,19 @@ export default function ProcessCommunity({ guild_id }) {
       messages.push(
         <div className={item.showcase_type === ShowcaseType.Feature ? "message-item featured" : "message-item"}>
           {/* TODO: Handle Attachments, Polls */}
-          {item.showcase_type === ShowcaseType.Feature ? <FontAwesomeIcon icon="fa-solid fa-bolt" size="lg" style={{color: "#5865F2",}} /> : <FontAwesomeIcon icon="fa-solid fa-comment-dots" size="lg" />}
-          <p className="message-timestamp">{new Date(item.timestamp).toLocaleDateString}</p>
+          {/* {item.showcase_type === ShowcaseType.Feature ? <FontAwesomeIcon icon="fa-solid fa-bolt" size="lg" style={{color: "#5865F2",}} /> : <FontAwesomeIcon icon="fa-solid fa-comment-dots" size="lg" />}
+          <p className="message-timestamp">{new Date(item.timestamp).toLocaleDateString()}</p>
           {item.author != null ? <div className="message-author"><img className="author-icon" src={authorAvatar} /><p className="author-name">{item.author.display_name}</p></div> : undefined}
-          <p className="message-content">{item.content}</p>
+          <p className="message-content">{item.content}</p> */}
+          <DiscordMessage
+            avatar={item.author != null ? authorAvatar : "blue"}
+            author={item.author != null ? item.author.display_name : "Anonymous User"}
+            /* roleIcon={item.showcase_type === ShowcaseType.Feature ? BlurpleSparklesIcon : undefined}
+            roleName={item.showcase_type === ShowcaseType.Feature ? "Featured Message" : undefined} */
+            timestamp={new Date(item.timestamp).toLocaleDateString()}
+          >
+            {item.content}
+          </DiscordMessage>
         </div>
       );
     });
@@ -215,7 +227,9 @@ export default function ProcessCommunity({ guild_id }) {
         <br />
         <div className="messages section one-column">
           <h3 id="messages-heading" className='grid-heading'>Noteworthy Recent Messages</h3>
-          {messages}
+          <DiscordMessages noBackground>
+            {messages}
+          </DiscordMessages>
         </div>
         <hr />
       </>

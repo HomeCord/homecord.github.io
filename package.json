@@ -19,6 +19,8 @@
     "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
+    "@skyra/discord-components-core": "^4.0.2",
+    "@skyra/discord-components-react": "^4.0.2",
     "discord-api-types": "^0.38.37",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
