@@ -160,6 +160,28 @@ hr {
   p {
     margin-top: 0.5%;
   }
+
+  .event-name {
+    font-weight: bold;
+  }
+}
+
+.thread-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  background-color: #614c4f70;
+  padding: 0.5% 0.3%;
+  margin-left: 1%;
+  margin-bottom: 0.3%;
+  border-radius: 0.5rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  p {
+    margin-left: 1%;
+  }
 }
 
 .messages {
