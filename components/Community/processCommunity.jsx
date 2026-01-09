@@ -229,6 +229,10 @@ export default function ProcessCommunity({ guild_id }) {
       );
     }
 
+    // For rendering showcased messages correctly depending on browser's theme
+    let prefersLightTheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+    let messagesSection = prefersLightTheme ? <DiscordMessages noBackground lightTheme>{messages}</DiscordMessages> : <DiscordMessages noBackground>{messages}</DiscordMessages>;
+
     return (
       <>
         <NavigationBar />
@@ -259,9 +263,7 @@ export default function ProcessCommunity({ guild_id }) {
         <br />
         <div className="messages section one-column">
           <h3 id="messages-heading" className='grid-heading'>Noteworthy Recent Messages</h3>
-          <DiscordMessages noBackground>
-            {messages}
-          </DiscordMessages>
+          {messagesSection}
         </div>
         <hr />
       </>

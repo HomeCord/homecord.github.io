@@ -271,33 +271,51 @@ hr {
   a:hover {
     color: #747bff;
   }
+  .button {
+    background-color: #579bda21;
+  }
   .button:hover {
     border-color: #0f0f0f;
     border-width: 2px;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #757bf8aa);
+    a {
+      color: darkcyan;
+    }
   }
   hr {
     border-color: #fbab6177;
   }
-  .section-description {
-    color: #666666;
+  .discord-guild {
+    background-color: #4e4e4e10;
   }
-  .card {
-    background-color: #0f0f0f18;
+  #guild-icon:hover {
+    filter: drop-shadow(0 0 1em #757bf8aa);
   }
-  .card:hover {
-    filter: drop-shadow(0 0 2em #7b81f7c0);
+  #guild-members {
+    color: #7e7e7e;
   }
-  .card-link .card-description {
-    color: #3d3d3d;
+  .section {
+    background-color: #4e4e4e10;
   }
-  .card-link p {
-    color: #202224;
+  .featured {
+    background-color: #5865f23f !important;
   }
-  .faded-text {
-    color: #888;
+  .empty-item {
+    color: #bebebe;
+  }
+  .event-item {
+    background-color: #9b797e70;
+  }
+  .thread-item {
+    background-color: #9b797e70;
+  }
+  .announcement-item {
+    background-color: #9b797e70;
+  }
+  .message-item {
+    background-color: #9b797e70;
+  }
+  discord-message {
+    color: #213547;
   }
 }
 
