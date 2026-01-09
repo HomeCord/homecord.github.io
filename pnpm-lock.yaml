@@ -39,8 +39,8 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
       react-router:
-        specifier: ^7.11.0
-        version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: ^7.12.0
+        version: 7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       swr:
         specifier: ^2.3.8
         version: 2.3.8(react@19.2.3)
@@ -312,8 +312,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==, tarball: https://registry.npmjs.org/@humanwhocodes/retry/-/retry-0.4.3.tgz}
     engines: {node: '>=18.18'}
 
-  '@lit-labs/ssr-dom-shim@1.5.0':
-    resolution: {integrity: sha512-HLomZXMmrCFHSRKESF5vklAKsDY7/fsT/ZhqCu3V0UoW/Qbv8wxmO4W9bx4KnCCF2Zak4yuk+AGraK/bPmI4kA==, tarball: https://registry.npmjs.org/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.5.0.tgz}
+  '@lit-labs/ssr-dom-shim@1.5.1':
+    resolution: {integrity: sha512-Aou5UdlSpr5whQe8AA/bZG0jMj96CoJIWbGfZ91qieWu5AWUMKw8VR/pAkQkJYvBNhmCcWnZlyyk5oze8JIqYA==, tarball: https://registry.npmjs.org/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.5.1.tgz}
 
   '@lit/context@1.1.6':
     resolution: {integrity: sha512-M26qDE6UkQbZA2mQ3RjJ3Gzd8TxP+/0obMgE5HfkfLhEEyYE3Bui4A5XHiGPjy0MUGAyxB3QgVuw2ciS0kHn6A==, tarball: https://registry.npmjs.org/@lit/context/-/context-1.1.6.tgz}
@@ -951,8 +951,8 @@ packages:
     peerDependencies:
       react: ^19.2.3
 
-  react-router@7.11.0:
-    resolution: {integrity: sha512-uI4JkMmjbWCZc01WVP2cH7ZfSzH91JAZUDd7/nIprDgWxBV1TkkmLToFh7EbMTcMak8URFRa2YoBL/W8GWnCTQ==, tarball: https://registry.npmjs.org/react-router/-/react-router-7.11.0.tgz}
+  react-router@7.12.0:
+    resolution: {integrity: sha512-kTPDYPFzDVGIIGNLS5VJykK0HfHLY5MF3b+xj0/tTyNYL1gF1qs7u67Z9jEhQk2sQ98SUaHxlG31g1JtF7IfVw==, tarball: https://registry.npmjs.org/react-router/-/react-router-7.12.0.tgz}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -1234,7 +1234,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@lit-labs/ssr-dom-shim@1.5.0': {}
+  '@lit-labs/ssr-dom-shim@1.5.1': {}
 
   '@lit/context@1.1.6':
     dependencies:
@@ -1246,7 +1246,7 @@ snapshots:
 
   '@lit/reactive-element@2.1.2':
     dependencies:
-      '@lit-labs/ssr-dom-shim': 1.5.0
+      '@lit-labs/ssr-dom-shim': 1.5.1
 
   '@rolldown/pluginutils@1.0.0-beta.27': {}
 
@@ -1714,7 +1714,7 @@ snapshots:
 
   lit-element@4.2.2:
     dependencies:
-      '@lit-labs/ssr-dom-shim': 1.5.0
+      '@lit-labs/ssr-dom-shim': 1.5.1
       '@lit/reactive-element': 2.1.2
       lit-html: 3.3.2
 
@@ -1788,7 +1788,7 @@ snapshots:
       react: 19.2.3
       scheduler: 0.27.0
 
-  react-router@7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  react-router@7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       cookie: 1.1.1
       react: 19.2.3

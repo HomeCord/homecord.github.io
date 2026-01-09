@@ -141,6 +141,27 @@ hr {
   background-color: #5865f23f !important;
 }
 
+.threads {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5% 0.3%;
+  margin-left: 0.1%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.scheduled-events {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  width: 90%;
+  padding: 0.5% 0.3%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .event-item {
   display: flex;
   align-items: center;
