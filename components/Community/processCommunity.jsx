@@ -195,6 +195,40 @@ export default function ProcessCommunity({ guild_id }) {
       );
     });
 
+
+    // If respective arrays have no content, display a "no <thing> found" message instead
+    if ( scheduledEvents.length === 0 ) {
+      scheduledEvents.push(
+        <div className="event-item">
+          <p className="empty-item">No upcoming scheduled events found.</p>
+        </div>
+      );
+    }
+
+    if ( announcements.length === 0 ) {
+      announcements.push(
+        <div className="announcement-item">
+          <p className="empty-item">No recent announcements found.</p>
+        </div>
+      );
+    }
+
+    if ( threads.length === 0 ) {
+      threads.push(
+        <div className="thread-item">
+          <p className="empty-item">No recently active threads found.</p>
+        </div>
+      );
+    }
+
+    if ( messages.length === 0 ) {
+      messages.push(
+        <div className="message-item">
+          <p className="empty-item">No recently showcased messages found.</p>
+        </div>
+      );
+    }
+
     return (
       <>
         <NavigationBar />

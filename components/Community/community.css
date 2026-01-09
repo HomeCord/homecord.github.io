@@ -141,6 +141,11 @@ hr {
   background-color: #5865f23f !important;
 }
 
+.empty-item {
+  color: #bebebe;
+  padding-top: 1%;
+}
+
 .threads {
   display: flex;
   width: 100%;
@@ -152,7 +157,6 @@ hr {
 
 .scheduled-events {
   display: flex;
-  justify-content: center;
   width: 90%;
   padding: 0.5% 0.3%;
   flex-wrap: wrap;
