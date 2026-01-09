@@ -182,10 +182,6 @@ export default function ProcessCommunity({ guild_id }) {
       messages.push(
         <div className={item.showcase_type === ShowcaseType.Feature ? "message-item featured" : "message-item"}>
           {/* TODO: Handle Attachments, Polls */}
-          {/* {item.showcase_type === ShowcaseType.Feature ? <FontAwesomeIcon icon="fa-solid fa-bolt" size="lg" style={{color: "#5865F2",}} /> : <FontAwesomeIcon icon="fa-solid fa-comment-dots" size="lg" />}
-          <p className="message-timestamp">{new Date(item.timestamp).toLocaleDateString()}</p>
-          {item.author != null ? <div className="message-author"><img className="author-icon" src={authorAvatar} /><p className="author-name">{item.author.display_name}</p></div> : undefined}
-          <p className="message-content">{item.content}</p> */}
           <DiscordMessage
             avatar={item.author != null ? authorAvatar : "blue"}
             author={item.author != null ? item.author.display_name : "Anonymous User"}
