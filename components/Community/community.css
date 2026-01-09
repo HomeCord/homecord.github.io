@@ -83,6 +83,18 @@ hr {
   transition: filter 300ms;
 }
 
+#guild-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  width: 80%;
+  z-index: -1;
+  border-radius: 1rem 1rem 0.2rem 0.2rem;
+  mask-image: linear-gradient(to left, black 0, transparent 100%);
+  opacity: 30%;
+}
+
 #guild-icon {
   float: left;
   height: 7rem;

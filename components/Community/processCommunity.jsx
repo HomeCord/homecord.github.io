@@ -137,7 +137,7 @@ export default function ProcessCommunity({ guild_id }) {
 
     // Ok, NOW we know for certain HomeCord is enabled for this Discord Guild, so let's display its page!
     let discordGuildIcon = communityData.discord_guild.icon_hash != null ? <img src={`https://cdn.discordapp.com/icons/${guildId}/${communityData.discord_guild.icon_hash}.png`} id="guild-icon" /> : null;
-    //let discordGuildBanner = communityData.discord_guild.banner_hash != null ? <img src={`https://cdn.discordapp.com/banners/${guildId}/${communityData.discord_guild.banner_hash}.png`} id="guild-banner" /> : null;
+    let discordGuildBanner = communityData.discord_guild.banner_hash != null ? <img src={`https://cdn.discordapp.com/banners/${guildId}/${communityData.discord_guild.banner_hash}.png?size=1024`} id="guild-banner" /> : null;
 
     let scheduledEvents = [];
     communityData.showcased_events.forEach(item => {
@@ -233,6 +233,7 @@ export default function ProcessCommunity({ guild_id }) {
       <>
         <NavigationBar />
         <div className="discord-guild">
+          {discordGuildBanner}
           {discordGuildIcon}
           <h1 id="guild-name">{communityData.discord_guild.name}</h1>
           <p id="guild-description">{communityData.discord_guild.description ?? ""}</p>
