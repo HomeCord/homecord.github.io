@@ -12,7 +12,7 @@ jobs:
   label-sync:
     name: Label sync
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'TwilightZebby'
+    if: github.repository_owner == 'HomeCord'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

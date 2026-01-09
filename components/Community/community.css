@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1%;
+  text-align: center;
+  width: 45%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: fit-content;
+  min-height: 10vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1% 1.5%;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  border-color: whitesmoke;
+  a {
+    color: aquamarine;
+  }
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+hr {
+  border-radius: 1em;
+  border-color: #fbab6177;
+}
+
+.discord-guild {
+  padding: 0.9% 4%;
+  background-color: #f5f5f510;
+  border-radius: 1rem 1rem 0.2rem 0.2rem;
+  margin-top: 0.5%;
+  vertical-align: middle;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+#guild-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  width: 80%;
+  z-index: -1;
+  border-radius: 1rem 1rem 0.2rem 0.2rem;
+  mask-image: linear-gradient(to left, black 0, transparent 100%);
+  opacity: 30%;
+}
+
+#guild-icon {
+  float: left;
+  height: 7rem;
+  position: relative;
+  transform: translateY(15%);
+  border-radius: 2.5rem;
+}
+
+#guild-icon:hover {
+  filter: drop-shadow(0 0 1em #7b81f78a);
+}
+
+#guild-name {
+  font-size: xx-large;
+}
+
+#guild-members {
+  color: #888;
+}
+
+.section {
+  padding-top: 0.1%;
+  padding-bottom: 0.1%;
+  background-color: #f5f5f510;
+  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  vertical-align: middle;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.one-column {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  padding: 0.9% 0%;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  padding: 0.9% 0%;
+}
+
+.one-column .grid-heading {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.two-columns .grid-heading {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.featured {
+  background-color: #5865f23f !important;
+}
+
+.empty-item {
+  color: #bebebe;
+  padding-top: 1%;
+}
+
+.threads {
+  display: flex;
+  width: 100%;
+  padding: 0.5% 0.3%;
+  margin-left: 0.1%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.scheduled-events {
+  display: flex;
+  width: 90%;
+  padding: 0.5% 0.3%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  background-color: #614c4f70;
+  padding: 0.5% 0.3%;
+  margin-left: 1%;
+  margin-bottom: 0.3%;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  svg {
+    margin-top: 2%;
+  }
+
+  p {
+    margin-top: 0.5%;
+  }
+
+  .event-name {
+    font-weight: bold;
+  }
+}
+
+.thread-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  background-color: #614c4f70;
+  padding: 0.5% 0.3%;
+  margin-left: 1%;
+  margin-bottom: 0.3%;
+  border-radius: 0.5rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  p {
+    margin-left: 1%;
+  }
+}
+
+.announcement-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  background-color: #614c4f70;
+  padding: 0.5% 0.3%;
+  margin-left: 1%;
+  margin-bottom: 0.3%;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  svg {
+    margin-top: 2%;
+  }
+
+  p {
+    margin-left: 1%;
+  }
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 98%;
+  background-color: #614c4f70;
+  padding: 0.5% 0.3%;
+  margin-left: 1%;
+  border-radius: 0.5rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.messages {
+  border-radius: 0.2rem 0.2rem 1rem 1rem;
+}
+
+
+/* LIGHT THEME VERSIONS */
+@media (prefers-color-scheme: light) {
+  :root {
+  color: #213547;
+  background-color: whitesmoke;
+  }
+  a {
+    color: #646cff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  .button {
+    background-color: #579bda21;
+  }
+  .button:hover {
+    border-color: #0f0f0f;
+    border-width: 2px;
+    a {
+      color: darkcyan;
+    }
+  }
+  hr {
+    border-color: #fbab6177;
+  }
+  .discord-guild {
+    background-color: #4e4e4e10;
+  }
+  #guild-icon:hover {
+    filter: drop-shadow(0 0 1em #757bf8aa);
+  }
+  #guild-members {
+    color: #7e7e7e;
+  }
+  .section {
+    background-color: #4e4e4e10;
+  }
+  .featured {
+    background-color: #5865f23f !important;
+  }
+  .empty-item {
+    color: #bebebe;
+  }
+  .event-item {
+    background-color: #9b797e70;
+  }
+  .thread-item {
+    background-color: #9b797e70;
+  }
+  .announcement-item {
+    background-color: #9b797e70;
+  }
+  .message-item {
+    background-color: #9b797e70;
+  }
+  discord-message {
+    color: #213547;
+  }
+}
+
